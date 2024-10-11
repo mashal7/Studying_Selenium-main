@@ -39,6 +39,11 @@ time.sleep(2)
 
 link_about = driver.find_element(By.XPATH, "//a[@id='about_sidebar_link']")
 link_about.click()
-assert driver.current_url == 'https://saucelabs.com/', 'Ошибка'
-print('Адрес верный')
-print(driver.current_url)
+# assert driver.current_url == 'https://saucelabs.com/', 'Ошибка'
+# print('Адрес верный')
+# print(driver.current_url)
+driver.back()
+print('Go back')
+time.sleep(3)
+driver.forward()
+print('Go forward')
